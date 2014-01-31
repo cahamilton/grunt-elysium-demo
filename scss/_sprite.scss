@@ -1,0 +1,86 @@
+// ==========================================================================
+// Sprite
+// ==========================================================================
+
+
+// Import local sprite variables created By Grunt-Spritesmith
+// ==========================================================================
+
+@import "_spritesmith.scss";
+@import "_spritesmith-2x.scss";
+
+
+// The below Mixins help construct Retina Media Queries for sprites generated 
+// by Grunt-Spritesmith
+// ==========================================================================
+
+@mixin sprite-background-size($sprite) {
+	background-size: nth($sprite, 7) nth($sprite, 8);
+}
+
+@mixin retina-sprite($sprite, $sprite2x) {
+	@include sprite($sprite);
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+		@include sprite-image($sprite2x);
+		@include sprite-background-size($sprite);
+	}
+}
+
+
+
+// Icons
+// ==========================================================================
+
+.icon {
+	display: inline-block;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	vertical-align: middle;
+	text-indent: -99999px;
+}
+
+
+.icon-digg {
+	@include retina-sprite($icon-digg-1x, $icon-digg-2x);
+}
+.icon-dribbble {
+	@include retina-sprite($icon-dribbble-1x, $icon-dribbble-2x);
+}
+.icon-facebook {
+	@include retina-sprite($icon-facebook-1x, $icon-facebook-2x);
+}
+.icon-flickr {
+	@include retina-sprite($icon-flickr-1x, $icon-flickr-2x);
+}
+.icon-forrst {
+	@include retina-sprite($icon-forrst-1x, $icon-forrst-2x);
+}
+.icon-google {
+	@include retina-sprite($icon-google-1x, $icon-google-2x);
+}
+.icon-html5 {
+	@include retina-sprite($icon-html5-1x, $icon-html5-2x);
+}
+.icon-lastfm {
+	@include retina-sprite($icon-lastfm-1x, $icon-lastfm-2x);
+}
+.icon-linkedin {
+	@include retina-sprite($icon-linkedin-1x, $icon-linkedin-2x);
+}
+.icon-skype {
+	@include retina-sprite($icon-skype-1x, $icon-skype-2x);
+}
+.icon-tumblr {
+	@include retina-sprite($icon-tumblr-1x, $icon-tumblr-2x);
+}
+.icon-twitter {
+	@include retina-sprite($icon-twitter-1x, $icon-twitter-2x);
+}
+.icon-vimeo {
+	@include retina-sprite($icon-vimeo-1x, $icon-vimeo-2x);
+}
+.icon-yahoo {
+	@include retina-sprite($icon-yahoo-1x, $icon-yahoo-2x);
+}

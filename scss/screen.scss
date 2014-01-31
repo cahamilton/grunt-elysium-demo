@@ -1,0 +1,451 @@
+// ==========================================================================
+// Sass includes
+// ==========================================================================
+
+@import "_grid.scss";
+
+
+// 
+// HTML5 Boilerplate
+//
+// What follows is the result of much research on cross-browser styling.
+// Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+// Kroc Camen, and the H5BP dev community and team.
+//
+
+// ==========================================================================
+// Base styles: opinionated defaults
+// ==========================================================================
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #222;
+}
+
+body {
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+a {
+	color: #00e;
+}
+
+a:visited {
+	color: #551a8b;
+}
+
+a:hover {
+	color: #06e;
+}
+
+// 
+// Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+// 
+
+img {
+	vertical-align: middle;
+}
+
+// 
+// Remove default fieldset styles.
+// 
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+// 
+// Allow only vertical resizing of textareas.
+// 
+
+textarea {
+	resize: vertical;
+}
+
+// ==========================================================================
+// Prefix
+// ==========================================================================
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ccc;
+}
+
+a {
+	display: flex;
+}
+
+.button {
+	display: inline-block;
+	padding: 1em 2em;
+	border-radius: 5px;
+	background: #333;
+	color: white;
+	text-shadow: 1px 1px 1px #ccc; 
+	-ms-transition: background 1s ease;
+	transition: background 1s ease;
+	-moz-box-shadow: 0 0px 5px 0px #666;
+	box-shadow: 0 0px 5px 0px #666; 
+}
+ 
+.button-primary {
+	background: #e6f0a3;
+	background: -moz-linear-gradient(top,  #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6f0a3), color-stop(50%,#d2e638), color-stop(51%,#c3d825), color-stop(100%,#dbf043));
+	background: -webkit-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%);
+	background: -o-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%);
+	background: -ms-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%);
+	background: linear-gradient(to bottom,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 );
+}
+
+.button-secondary {
+	background: #e1ffff;
+	background: -ms-linear-gradient(top,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+	background: linear-gradient(to bottom,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+}
+
+.button-tertiary {
+	background: red;
+	background-image: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
+}
+
+
+// ==========================================================================
+// Combine Media Queries
+// ==========================================================================
+
+
+.row {
+	@include grid-row;
+	color: #fff;
+	background: #fff;
+}
+
+.column {
+	margin-bottom: 1em;
+}
+
+.inner {
+	padding: 1em;
+} 
+
+.row-1 {
+
+	.inner {
+		background: lightslategray;
+	}
+
+	.column-1 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(6,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(3,12);
+		}
+	}
+
+	.column-2 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(6,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(3,12);
+		}
+	}
+
+	.column-3 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(6,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(3,12);
+		}
+	}
+
+	.column-4 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(6,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(3,12);
+		}
+	}
+
+}
+
+
+.row-2 {
+
+	.inner {
+		background: lightcoral;
+	}
+
+	.column-1 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(7,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(4,12);
+		}
+	}
+
+	.column-2 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(5,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(8,12);
+		}
+	}
+
+}
+
+.row-3 {
+
+	.inner {
+		background: lightpink;
+	}
+
+	.column-1 {
+		@include grid-column(12);
+	}
+
+}
+
+
+
+.row-4 {
+
+	.inner {
+		background: lightblue;
+	}
+
+	.column-1 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(5,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(8,12);
+		}
+	}
+
+	.column-2 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(7,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(4,12);
+		}
+	}
+	 
+}
+
+
+.row-5 {
+
+	.inner {
+		background: lightgreen;
+	}
+
+	.column-1 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-2 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-3 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-4 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-5 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-6 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-7 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-8 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-9 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-10 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-11 {
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+	.column-12 {	
+		@include grid-column(12);
+
+		@media #{$medium} {
+			width: gridCalc(4,12);
+		}
+
+		@media #{$large} {
+			width: gridCalc(1,12);
+		}
+	}
+
+}
+
+
+// ==========================================================================
+// Sprite
+// ==========================================================================
+
+@import "_sprite.scss";
+
+
+//
+// Clearfix helper
+// Used to contain floats: h5bp.com/q
+// 
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
