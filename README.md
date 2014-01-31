@@ -17,3 +17,6 @@
 
 - `grunt server` - Run connect and watch tasks together
 - `grunt build` - Run all the above tasks in succession 
+
+
+https://speakerdeck.com/cahamilton/grunt
